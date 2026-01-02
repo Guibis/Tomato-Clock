@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomato Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <main class="container">
+    <h1>Tomato Clock 🍅</h1>
+
+    <div class="mode-switch">
+      <button id="workMode" class="active">Work</button>
+      <button id="breakMode">Break</button>
+    </div>
+
+    <div id="timer" class="timer">25:00</div>
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <section class="history">
+      <h2>History</h2>
+      <div id="historyLog"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
