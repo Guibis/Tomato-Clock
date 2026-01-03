@@ -1,1 +1,178 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+}
+
+.timer {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+
+.controls button, .mode-switch button {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.controls button {
+    background: #333;
+    color: white;
+}
+
+.controls button:hover{
+    box-shadow: 0 0 0.5em 0em #727272;
+    background: #2e2e2e;
+    transform: translateY(-1px);
+}
+
+.break {
+    background: #ff5252;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 20px;
+}
+
+.break:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background : #fff;
+  right: -40px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.break:hover:before {
+  right: 120%;
+}
+
+.work {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 20px;
+}
+
+.work:before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 50px;
+  background : #fff;
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.work:hover:before {
+  left:95%;
+}
+
+.history {
+    margin-top: 1.5rem;
+}
+
+#historyLog {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#clearHistoryBtn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border-color: #4e4e4e;
+    color: #000;
+    &:hover {
+        transform: translateY(-0.15em);
+        box-shadow: 0 0 0.5em 0em #a0a0a0;
+        border-color: #272727;
+        color: #5e5e5e;
+    }
+}
+
+@media (min-width: 750px) {
+    .container {
+        padding: 80px;
+        width: 600px;
+    }
+    main h1 {
+        font-size: 3.5rem;
+    }
+    button {
+        font-size: 1.5rem;
+    }
+    .timer {
+        font-size: 4rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    #historyLog{
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 2400px) {
+    .container {
+        padding: 100px;
+        width: 800px;
+    }
+    main h1 {
+        font-size: 5rem;
+    }
+    button {
+        font-size: 2.5rem;
+        border-radius: 13px;
+    }
+    .timer {
+        font-size: 5.3rem;
+    }
+    section h2 {
+        font-size: 3rem;
+    }
+    #historyLog{
+        font-size: 3.3rem;
+        margin-bottom: 10px;
+    }
+}
